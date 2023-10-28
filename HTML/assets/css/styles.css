@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root{
+  --header-height: 3rem;
+  --first-color: #FCA4A6;
+  --first-color-dark: #C1576A;
+  --first-color-darken: #A83E51;
+  --white-color: #FCF8F8;
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 2.5rem;
+  --normal-font-size: .938rem;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 768px){
+  :root{
+    --big-font-size: 1rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+/*===== BASE =====*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: var(--header-height) 0 0 0;
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  background-color: rgb(255, 194, 212);
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: 600px;
+  position: absolute;
+  right: 150px;
+  top: 210px;
+
+ }
+
+*{
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+
+
+}
+.banner{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: left;
+  
+}
+.fit{
+  font-size: 40px;
+  color: #fff;
+}
+.navbar{
+  width: 90%;
+  margin: auto;
+  padding:35px 0;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+.li{
+  width:100px ;
+  cursor: pointer;
+}
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+
+}
+.navbar ul li a{
+  text-decoration:none;
+  color:#fff;
+ 
+
+}
+.navbar ul li::after{
+  content: '';
+  height: 3px;
+  width: 100%;
+  
+  position:absolute;
+  left:0;
+  bottom:-10px;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after{
+  width: 100%;
+
+}
+.content{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+ left:150px;
+  transform: translateY(-50%);
+  color: #fff;
+  right: 20%;
+
+}
+.content h1{
+  font-size: 100px;
+  margin-top: 80px;
+  align-items: left;
+  right: 20%;
+  
+}
+.content p{
+  margin: 20px auto;
+  font-weight: 200;
+  line-height: 25px;
+  right: 30%;
+  
+}
+button{
+  font-size: 15px;
+  width: 150px;
+  padding: 15px 0;
+  margin: 20px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: 2px solid #e66666;
+  background:#e66666;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  
+}
+span{
+  background: #7594fa;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+button:hover span{
+width: 100%;
+text-align: left;
+}
+button:hover{
+border: none;
+}
